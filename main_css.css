@@ -1,54 +1,99 @@
-body {
-  background-color: tan;
-  font-family: Arial, sans-serif;
+/* Base Styles  */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: tan;
+  font-family: Arial, sans-serif;
+}
+
+/*  Navbar  */
 ul.navbar {
   display: flex;
   list-style: none;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.9); /* شفافية */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* ظل بسيط */
- 
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
 }
 
-    ul.navbar li {
-      flex: 1;
-      text-align: center;
-    }
+ul.navbar li {
+  flex: 1;
+  text-align: center;
+}
 
-    ul.navbar a {
-      display: block;
-      padding: 10px;
-      text-decoration: none;
-      color: #333;
-    }
+ul.navbar a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
 a:hover {
   background-color: #6f4c3e;
 }
 
-	
-/* About us design*/
+/* Heading  */
+h1 {
+  font-size: 45px;
+  color: tan;
+  background-color: rgba(173, 216, 230, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  display: inline;
+}
+
+/*Home Section */
+.content {
+  text-align: center;
+  margin-top: 250px;
+}
+
+.primary-text {
+  color: green;
+}
+
+p {
+  font-size: 30px;
+  color: #333;
+  line-height: 1;
+}
+
+/*  About Us Section  */
 .about-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   padding: 50px;
   gap: 40px;
-  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.video-section {
+  flex: 1 1 300px;
 }
 
 .video-section video {
-  width: 90%;
+  width: 100%;
   max-width: 400px;
   height: auto;
   border-radius: 10px;
 }
 
 .text-section {
-  flex: 1;
+  flex: 1 1 300px;
   min-width: 250px;
+}
+
+.text-section h2,
+.text-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .text-section p {
@@ -57,89 +102,34 @@ a:hover {
   line-height: 1.6;
 }
 
-.menu-button:hover   {
-  background-color: #8B4513;
+.text-section ul {
+  margin-top: 10px;
+}
+
+.menu-button {
   padding: 10px 20px;
-  margin-right: 10px;
-  margin-top: 20px;
+  margin: 10px 5px 0 0;
   border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
-  cursor: pointer;
   transition: background-color 0.3s ease;
 }
-	 
- li:not(.u2)
- {
-	 float:left;
-	 padding:15px 15px;
-	 color:white;
-	 text-decoration:none;
- }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    .about-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 20px;
-    }
 
-    .video-section {
-      flex: 1 1 300px;
-    }
+.menu-button:hover {
+  background-color: #8B4513;
+}
 
-    .video-section video {
-      width: 100%;
-      height: auto;
-    }
-
-    .text-section {
-      flex: 1 1 300px;
-    }
-
-    .text-section h2, .text-section h3 {
-      margin-bottom: 15px;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .text-section ul {
-      margin-top: 10px;
-    }
-
-    .menu-button {
-      padding: 10px 20px;
-      margin: 10px 5px 0 0;
-      border: none;
-      background-color: #333;
-      color: white;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      .about-container {
-        flex-direction: column;
-      }
-
-      ul.navbar {
-        flex-direction: column;
-      }
-    }
-	/* End of About Us design*/
-	
-
-/* Drinks design*/
+/*  Drinks Section  */
 .menu-container {
   display: flex;
   justify-content: space-between;
   background-color: tan;
   padding: 50px 40px;
   border-radius: 20px;
-
+  flex-wrap: wrap;
 }
 
 .menu-section {
@@ -174,86 +164,54 @@ li {
 .price {
   color: #7a5b3a;
 }
-/* End of Drinks design*/
 
-/*Home design*/
-.content {
-  text-align: center;        /* توسيط النص */
-  margin-top: 250px;          /* مسافة من الأعلى */
-  font-family: Arial, sans-serif;  /* خط واضح */
- 
+/*  Desserts Section */
+.dessert-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-h1 {
-  font-size: 45px;
-  color: #4C8C61; /* لون مناسب للأخضر */
-  background-color: rgba(173,216,230, 0.8); /*0% */
-  color: tan; /* لون النص */
-  padding: 10px;
-  border-radius: 5px;
-  display:inline
-  
+.dessert-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
-.primary-text{
-	color:green;
+
+.dessert-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
 }
-p {
-  font-size: 30px;
-  color: #333;
-  line-height: 1;
-  
-}	
-/*End of Home design*/
 
- 
-/*Dessert design*/
-    .dessert-menu {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+.dessert-item h3 {
+  margin: 10px 0 5px;
+  color: #4a2e14;
+}
 
-    .dessert-item {
-      background-color: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+.dessert-item p {
+  color: tan;
+  font-weight: bold;
+}
 
-    .dessert-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
+.heart {
+  cursor: pointer;
+  color: #aaa;
+  font-size: 20px;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
 
-    .dessert-item h3 {
-      margin: 10px 0 5px;
-      color: #4a2e14;
-    }
+.heart.favorited {
+  color: red;
+}
 
-    .dessert-item p {
-      color: tan ;
-      font-weight: bold;
-    }
-
-    .heart {
-      cursor: pointer;
-      color: #aaa;
-      font-size: 20px;
-      margin-left: 10px;
-      transition: color 0.3s;
-    }
-
-    .heart.favorited {
-      color: red;
-    }
-  /*End of Dessert design*/
-  
-  /* Offers Table */
+/*  Offers Table Section  */
 .toggle-button {
   display: block;
   margin: 0 auto 20px;
@@ -273,7 +231,7 @@ p {
   font-family: Arial, sans-serif;
   font-size: 14px;
   background-color: #fff8f0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .offers-table th,
@@ -291,4 +249,25 @@ p {
 
 .offers-table tr:hover {
   background-color: #f9f0e5;
+}
+
+/* Responsive Design*/
+@media (max-width: 768px) {
+  .about-container,
+  .menu-container {
+    flex-direction: column;
+  }
+
+  ul.navbar {
+    flex-direction: column;
+  }
+
+  .menu-section {
+	  width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .dessert-menu {
+    grid-template-columns: 1fr;
+  }
 }
