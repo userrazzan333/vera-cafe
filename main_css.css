@@ -24,6 +24,9 @@ ul.navbar {
       text-decoration: none;
       color: #333;
     }
+a:hover {
+  background-color: #f9f0e5;
+}
 	
 /* About us design*/
 .about-container {
