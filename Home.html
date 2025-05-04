@@ -1,0 +1,68 @@
+<html>
+<head>
+<link rel="stylesheet" href="main_css.css">
+<title>Book a table</title>
+<script type="text/javascript">
+
+        function confirmBooking() {
+            let confirmMsg = confirm("هل تريد تأكيد الحجز؟");
+            if (confirmMsg) {
+                alert("تم تأكيد الحجز!");
+            } else {
+                alert("تم إلغاء الحجز.");
+            }
+        }
+ </script>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<ul class="navbar">
+  <li><a href="name.html">Names</a></li>
+  <li><a href="Home.html">Home</a></li>
+  <li><a href="About us.html">About Us</a></li>
+  <li><a href="Drinks.html">Drinks</a></li>
+  <li><a href="dessertMenuuuu.html">Dessert</a></li>
+  <li><a href="conact us (1).html">Contact Us</a></li>
+</ul>
+
+<div class="content">
+<h1>Welcome To <span class="primary-text"> Vera فيرا </span> Cafe</h1>
+<p> عالم من النقاء والقهوة,والخضرة</p>
+</div>
+
+<button class="center-button" onclick="confirmBooking()" style="display: block; margin-left: auto; margin-right: auto; background-color: #8FBC8F; color: white;
+ padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-top: 20px; transition: background-color 0.3s ease;"
+onmouseover="this.style.backgroundColor='#708090';"
+onmouseout="this.style.backgroundColor='#8FBC8F';">
+  Book a Table
+</button>
+ 
+ 
+ 
+<img src="project.jpg.jpeg" alt="صورة" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+<style>
+	@media (max-width: 600px) {
+  .content {
+    padding: 10px;
+  }
+
+  .center-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+</style>
+</head>
+</body>
+</html> 
+
+

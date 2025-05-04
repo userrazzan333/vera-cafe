@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_css.css">
+	<title>Dessert Menu</title>
+
+
+  <script>
+  //fav dessert
+    function toggleFavorite(el) {
+      el.classList.toggle('favorited');
+      el.textContent = el.classList.contains('favorited') ? '❤️' : '♡';
+    }
+	
+//table function, to showe or hide it
+  function toggleOffers() {
+    const table = document.getElementById("offersTable");
+    const button = document.querySelector(".toggle-button");
+
+    if (table.style.display === "none") {
+      table.style.display = "table";
+      button.textContent = "Hide Offers";
+    } else {
+      table.style.display = "none";
+      button.textContent = "Show Offers";
+    }
+  }
+</script>
+  
+<body>
+<ul class="navbar">
+  <li><a href="name.html">Names</a></li>
+  <li><a href="Home.html">Home</a></li>
+  <li><a href="About us.html">About Us</a></li>
+  <li><a href="Drinks.html">Drinks</a></li>
+  <li><a href="dessertMenuuuu.html">Dessert</a></li>
+  <li><a href="conact us (1).html">Contact Us</a></li>
+</ul>
+
+  <h1 style="text-align: center; font-size: 36px; color: #4a2e14; margin-bottom: 40px; font-weight: bold;">
+Dessert </h1>
+
+  <div class="dessert-menu">
+    <div class="dessert-item">
+      <img src="dessert menu images\image1.jpg"alt="Cheesecake">
+      <h3>Cheesecake <span class="heart" onclick="toggleFavorite(this)">♡</span></h3>
+      <p>$18</p>
+    </div>
+
+    <div class="dessert-item">
+      <img src="dessert menu images\OIP.jpg"alt="Brownie">
+      <h3>Brownie <span class="heart" onclick="toggleFavorite(this)">♡</span></h3>
+      <p>$15</p>
+    </div>
+
+    <div class="dessert-item">
+      <img src="dessert menu images\bbbbb.jpg"alt="Tiramisu">
+      <h3>Tiramisu <span class="heart" onclick="toggleFavorite(this)">♡</span></h3>
+      <p>$20</p>
+    </div>
+
+    <div class="dessert-item">
+      <img src="dessert menu images\vanilla-cake-3.jpg"alt="vanillacake">
+      <h3>Vanilla Cake <span class="heart" onclick="toggleFavorite(this)">♡</span></h3>
+      <p>$12</p>
+    </div>
+
+    <div class="dessert-item">
+      <img src="dessert menu images\best-chocolate-cupcakes-recipe-SQUARE.jpg" alt="Cupcake">
+      <h3>Cupcake <span class="heart" onclick="toggleFavorite(this)">♡</span></h3>
+      <p>$10</p>
+    </div>
+
+    <div class="dessert-item">
+      <img src="dessert menu images\easy-chocolate-cake-2.jpg"alt="Chocolate Cake">
+      <h3>Chocolate Cake <span class="heart" onclick="toggleFavorite(this)">♡</span></h3>
+      <p>$14</p>
+    </div>
+
+    <div class="dessert-item">
+      <img src="dessert menu images\san-sebastian-cheesecake-068-mitliebezurtorte.jpg"alt="san sebistian">
+      <h3>San Sebastian <span class="heart" onclick="toggleFavorite(this)">♡</span></h3>
+      <p>$16</p>
+    </div>
+
+    <div class="dessert-item">
+      <img src="dessert menu images\classic-apple-pie-recipe-10-scaled.jpg" alt="Apple Pie">
+      <h3>Apple Pie <span class="heart" onclick="toggleFavorite(this)">♡</span></h3>
+      <p>$18</p>
+    </div>
+
+    <div class="dessert-item">
+      <img src="dessert menu images\OIP (1).jpg" alt="Lemon Tart">
+      <h3>Lemon Tart <span class="heart" onclick="toggleFavorite(this)">♡</span></h3>
+      <p>$17</p>
+    </div>
+	
+<!-- table starts from here -->
+
+<button class="toggle-button" onclick="toggleOffers()">Show Offers</button> 
+<table class="offers-table" id="offersTable" style="display: none;">
+  <thead>
+    <tr>
+      <th>Offer Name</th>
+      <th>Description</th>
+      <th>Price After Discount</th>
+      <th>Valid Until</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Choco Combo</td>
+      <td>Brownie + Hot Chocolate</td>
+      <td>$20</td>
+      <td>May 10, 2025</td>
+    </tr>
+    <tr>
+      <td>Sweet Deal</td>
+      <td>2 Cupcakes + 1 Lemon Tart</td>
+      <td>$22</td>
+      <td>May 8, 2025</td>
+    </tr>
+    <tr>
+      <td>Cheesecake Lover</td>
+      <td>2 Cheesecakes + Free Macaron</td>
+      <td>$30</td>
+      <td>May 15, 2025</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
